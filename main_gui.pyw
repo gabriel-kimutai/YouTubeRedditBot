@@ -9,7 +9,7 @@ import sys
 import requests
 import os
 from pathlib import Path
-from RedDownloader import RedDownloader
+from refactor import RedDownloader  
 from moviepy.editor import concatenate_videoclips, VideoFileClip
 from os.path import isfile, join
 from collections import defaultdict
@@ -18,6 +18,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import undetected_chromedriver as uc
+
+sys.path.insert(0, './refactor/')
 
 root = Tk()
 cwd = os.getcwd()
